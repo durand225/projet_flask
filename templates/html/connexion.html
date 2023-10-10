@@ -3,34 +3,37 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{{url_for('static', filename='css/connexion.css')}}">
+    
     <title>Document</title>
 </head>
 <body>
-    <section>
-         <div class="imgpremier"></div>
-         <div class="contentBox">
-            <h2>Connectez-vous</h2>
-            <form action="#">
-                <div class="inputBx">
-                    <span>Email</span>
-                    <input type="text">
+        <form action="">
+
+
+            <div class="container">
+                <div class="brand-logo"></div>
+                <div class="brand-title">CONNEXION</div>
+                <div class="inputs">
+                <label>EMAIL</label>
+                <input type="email" id="mailverif" placeholder="entré votre email" />
+                <label>MOT DE PASSE </label>
+                <input type="password" id="passeverif" placeholder="entré votre mot de passe" />
+    
+                <button  type="submit" id="connerds" >SE CONNECTER</button>
+                <div class="">
+                    <a href="/aboute" id="connerds">S'INCRIRE.</a>
                 </div>
-                <div class="inputBx">
-                    <span>Mot de passe</span>
-                    <input type="mot de passe">
+                <!-- <div class="image">
+                    <img class="oli" src="../assets/mon logo.webp" alt="" width="70px" height="70px">
+                </div> -->
                 </div>
-                <div class="remenber">
-                    <label><input type="checkbox">souvient toi</label>
-                </div>
-                <div class="inputBx">
-                    <span>Mot de passe</span>
-                    <input type="submit" value="log in">
-                </div>
-                <div class="inputBx">
-                   <p>pas de compte? <a href="#">inscrit-toi</a></p>
-                </div>
-            </form>
-         </div>
-    </section>
+                <!-- <div class="titreacceuil">
+                    <p class="b2">OLI GROUPE.sa</p>
+                </div>   -->
+            </div>
+            <div class="durand">
+                <a href="../index.html"><button>retour a l'acceuil</button></a>
+        </form>
 </body>
 </html>
