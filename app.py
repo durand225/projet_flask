@@ -17,4 +17,14 @@ def about_us():
 def acceuil():
     return render_template('/html/index.html')
 
+@app.route('/profil', methods = ['GET', 'POST'])
+def profil():
+    return render_template('/html/profil.html')
+
+
+if __name__ == '__main__':
+    app.run(debug=True)
+
+
+
 
