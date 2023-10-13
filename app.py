@@ -21,6 +21,10 @@ def acceuil():
 def profil():
     return render_template('/html/profil.html')
 
+@app.route('/inscription', methods = ['GET', 'POST'])
+def inscription():
+    return render_template('/html/inscription.html')
+
 
 if __name__ == '__main__':
     app.run(debug=True)

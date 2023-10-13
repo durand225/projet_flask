@@ -2,7 +2,7 @@ body,html{
     height: 150%;
 }
 body{
-    background-color: rgb(17, 19, 18);
+    background-color: rgb(219, 249, 224);
     font-family: 'montserrat';
 
 }
@@ -11,7 +11,7 @@ body{
     justify-self: center;
     align-items: center;
     padding-top: 12%;
-    margin-left: 20%;
+    margin-left: 22%;
 
 
 }
@@ -39,7 +39,7 @@ body{
     position: absolute;
     height: 300%;
     width: 173px;
-    background: #3498db;
+    background: rgb(19, 17, 17);
     top: -60px;
     left: -125px;
     z-index: 0;
