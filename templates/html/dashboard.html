@@ -1,24 +1,76 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-  <title>dashboard page</title>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <link rel="stylesheet" href="#">
-  
-</head>
-<body>
-    {{% <p><b>Name: </b> {{user .name}}</p>%}}
-    <div class="container">
-      <div class="row justify-content-center">
-        <div class="col-sm-8">
-          <h2>user dahboard</h2>
-          <p><b>Name: </b> {{user .name}}</p>
-          <p><b>Email: </b> {{user .email}}</p>
-          <a href="/logout" class="btn btn-dark">logout</a>
-        </div>
-      </div>
-    </div>
-</body>
+<!DOCTYPE html> 
+<html lang="en"> 
+<head> 
+    <meta charset="UTF-8"> 
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"> 
+    <title>Document</title> 
+    <!-- <link rel="stylesheet" href="static/CSS/profil.css">  -->
+    <link rel="preconnect" href="https://fonts.googleapis.com"> 
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin> 
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@200&display=swap" rel="stylesheet"> 
+    <link rel="stylesheet" href="/static/css/dashboard.css"> 
+</head> 
+<body> 
+    <div class="ajoutons" > 
+        <div class="eduz"> 
+             
+            <a href="" >Inscrire un utilisateur</a> 
+            <h3>J'AJOUTE UN NOUVEAU UTILISATEUR</h3> 
+        </div> 
+        <div class="sys"> 
+            <a href="">Ajouter de produit</a> 
+            <h3>AJOUTER UN PRODUIT</h3> 
+        </div> 
+    </div> 
+    <br> 
+ 
+    <h1 style="font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;">MES UTILISATEURS INSCRITS</h1> 
+    <table> 
+      
+        <thead> 
+            <th>ID</th> 
+            <th>NAME</th> 
+            <th>PRENOM</th> 
+            <th>AGE</th> 
+            <th>AUTRE</th> 
+        </thead> 
+        {% for data in birn %} 
+        <tbody> 
+            <td>{{data.id}}</td> 
+            <td>{{data.name}}</td> 
+            <td>{{data.email}}</td> 
+            <td>{{data.password}}</td> 
+            <td><a href="/delete/{{data.id}}" class="suppr">SUPPRIMER</a></td> 
+            <td><a href="/update/{{data.id}}" class="modif">MODIFIER</a></td> 
+             
+        </tbody> 
+        {% endfor %} 
+    </table> 
+ 
+ 
+ 
+    <!-- <h3>MES LI</h3> 
+    <a href="/add_data">Inscrire un utilisateur</a> 
+    <br> 
+    <table> 
+        <thead> 
+            <th>ID</th> 
+            <th>NOM</th> 
+            <th>PRENOM</th> 
+            <th>AGE</th> 
+            <th>AUTRE</th> 
+        </thead> 
+        {% for data in profiles %} 
+        <tbody> 
+            <td>{{data.id}}</td> 
+            <td>{{data.first_name}}</td> 
+            <td>{{data.last_name}}</td> 
+            <td>{{data.age}}</td> 
+            <td><a href="/delete/{{data.id}}">SUPPRIMER</a></td> 
+            <td><a href="/join">MODIFIER</a></td> 
+             
+        </tbody> 
+        {% endfor %} 
+    </table> --> 
+</body> 
 </html>
-{% if%}

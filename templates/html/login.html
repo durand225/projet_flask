@@ -4,13 +4,13 @@
   <title>login page</title>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <link rel="stylesheet" href="#">
+  <link rel="stylesheet" href="{{url_for('static', filename= 'css/login.css')}}">
 </head>
 <body>
     <div class="container">
         <div class="row justify-content-center">
             <div class="col-sm-8">
-                <h2>login form</h2>
+                <h2>connexion</h2>
                 <form action="/login" method="post">
                     <div class="form-group">
                         <label for="email">Email:</label>
@@ -21,7 +21,7 @@
                         <input type="password" class="form-control" id="pwd" placeholder="Enter password" name="password">
                         </div>
                         <button type="submit" class="btn btn-DARK">Submit</button>
-                        <a href="/register" class="btn btn-primary">register</a>
+                        <a href="/register" class="btn btn-primary">inscription</a>
                  </form>
          </div>
 </body>

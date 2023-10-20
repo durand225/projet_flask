@@ -25,10 +25,9 @@ with app.app_context():
     db.create_all()
 
 
-@app.route('/')
+@app.route('/index')
 def index():
-    return 'Je suis la page index'
-
+    return render_template('/html/index.html')
 
 # creation de la base de donnée de l'utilisateur
 
@@ -52,6 +51,7 @@ def register():
 
 @app.route('/login',methods=['GET','POST'])
 def login():
+   
     if request.method == 'POST':
         email = request.form['email']
         password = request.form['password']
@@ -59,8 +59,9 @@ def login():
         user = User.query.filter_by(email=email, password=password).first()  
 
         if user:
+            birn = User.query.all()
             session['email'] = user.email
-            return render_template('/html/dashboard.html')
+            return render_template('/html/dashboard.html',birn=birn)
         else:
             return render_template('/html/login.html',error='ivalid user')
         
@@ -70,9 +71,10 @@ def login():
 
 @app.route('/dashboard')
 def dashboard():
-    if session['name']:
+    birn = User.query.all()
+    if session:
         user = User.query.filter_by(email=session['email']).first()
-        return render_template('dashboard.html' ,user=user)
+        return render_template('/html/dashboard.html' ,birn=birn)
     
     return redirect('/logout')
 
