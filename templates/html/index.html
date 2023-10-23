@@ -3,37 +3,28 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="{{url_for('static', filename='css/style.css')}}">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
-
     <title>Document</title>
+    <link rel="stylesheet" href="{{url_for('static', filename= 'css/style.css')}}">
+</head>
+    <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
 </head>
 <body>
-
-    <!-- header section start -->
-
-    <header class="header">
-
-        <div class="header1">
-
-            <a href="#" class="logo" ><i class="fas fa-book"></i>MaLibrairie.com</a>
-
-            <form action="" class="search-form">
-                <input type="search" name=""  placeholder="recherche ..." id="search-box">
-                <label for="search-box" class="fas fa-search"></label>
-            </form>
-
-            <div class="icons">
-                <div id="search-btn" class="fas fa-search"></div>
-                <a href="#" class="fas fa-heart"></a>
-                <a href="#" class="fas fa-shopping-cart"></a>
-                <div id="login-btn" class="fas fa-user"></div>
+    <nav>
+        <ul>
+            <li class="logo">Ma Librairie.com </li>
+            <div class=" items">
+                <li><a href="#">Acceuil</a></li>
+                <li><a href="#">Librairie</a></li>
+                <li><a href="#">Login</a></li>
+                <li><a href="#">S'inscrire</a></li>
             </div>
-       
-     
-
-
-        </div>
-    </header>
+            <li class="search-icon">
+                <input type="search" placeholder="search">
+               <label class="icon">
+                <span class="fas fa-search"></span>
+               </label>
+            </li>
+        </ul>
+    </nav>
 </body>
 </html>
